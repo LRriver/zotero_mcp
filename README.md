@@ -26,10 +26,10 @@ Here's the testing result:
 
 Upload files in Zotero in advance:
 
-![Zotero upload screenshot](image.png)
+![Zotero upload screenshot](./img/image.png)
 
 Query document content via MCP:
 
-![Query document content screenshot](image-1.png)
+![Query document content screenshot](./img/image-1.png)
 
 #### Detailed explanation will be updated soon

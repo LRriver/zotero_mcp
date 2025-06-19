@@ -26,10 +26,10 @@ python ./client.py
 
 提前在 Zotero 中上传文件：
 
-![Zotero 上传文件截图](image.png)
+![Zotero 上传文件截图](./img/image.png)
 
 通过 MCP 接入 Zotero，查询文档内容：
 
-![查询文档内容截图](image-1.png)
+![查询文档内容截图](./img/image-1.png)
 
 #### 详细说明将尽快更新
