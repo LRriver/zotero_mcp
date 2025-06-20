@@ -18,10 +18,12 @@ dotenv.load_dotenv()
 # )
 
 llm = OpenAILike(
-    model="gpt-4",
+    model=os.getenv("model"),
+    api_base = os.getenv("llm_api_base"),
     temperature=0.6,
     max_tokens=1024,
-    api_key=os.getenv(""),
+    api_key=os.getenv("llm_api_key"),
+    is_chat_model=True,
 )
 
 mcp_client = BasicMCPClient("http://127.0.0.1:8000/sse")

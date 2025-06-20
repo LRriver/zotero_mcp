@@ -5,15 +5,16 @@ from pydantic import BaseModel
 from pyzotero import zotero
 import os
 import json
-
+from dotenv import load_dotenv
+load_dotenv()
 
 class ZoteroWrapper(zotero.Zotero):
     def __init__(self):
         try:
             super().__init__(
-                library_id='',
+                library_id=os.getenv("library_id"),
                 library_type='user',
-                api_key=os.environ.get("zotero_api_key"),
+                api_key=os.getenv("zotero_api_key"),
             )
         except Exception as e:
             raise RuntimeError(f"Failed to initialize Zotero client: {str(e)}")
@@ -183,6 +184,7 @@ async def search_library(query: str, qmode: str = "titleCreatorYear", itemType: 
 
 
 if __name__ == "__main__":
+    # print(os.environ.get("zotero_api_key"))
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--server_type",

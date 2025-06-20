@@ -2,15 +2,26 @@
 [中文](./README_zh.md) | [English](./README.md)
 
 支持通过 MCP 协议连接 Zotero，包含自定义的服务端和客户端，无需依赖如 Claude 应用、Cursor 等工具。
+## 环境配置
+```
+conda create -n mcp python=3.12 -y
+conda activate mcp
+pip install -r requirements.txt
+```
 
-## 运行服务端
+## 运行MCP
 
-首先创建 `.env` 文件，并填写以下变量。其中 `zotero_api_key` 需要前往 Zotero 官网申请，`api_key` 是 LLM 的 API Key：
+首先创建 `.env` 文件，并填写以下变量。
 
 ```
+model=""
+llm_api_base = ""
+llm_api_key=""
 zotero_api_key=''
-api_key=""
+library_id=''
 ```
+`model`是LLM的名称，`llm_api_base`是LLM的url，`llm_api_key` 是 LLM 的 API Key，其中 `zotero_api_key` 点击 [zotero官网](https://www.zotero.org/settings/keys) 创建，你的[library_id](https://www.zotero.org/settings/keys)，如下图:
+![library_id](./img/user_id.png)
 
 然后启动服务端：
 ```bash
