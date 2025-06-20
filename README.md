@@ -51,5 +51,3 @@ Upload files in Zotero in advance:
 Query document content via MCP:
 
 ![Query document content screenshot](./img/image-1.png)
-
-#### Detailed explanation will be updated soon

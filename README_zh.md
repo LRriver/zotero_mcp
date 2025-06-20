@@ -42,5 +42,3 @@ python ./client.py
 通过 MCP 接入 Zotero，查询文档内容：
 
 ![查询文档内容截图](./img/image-1.png)
-
-#### 详细说明将尽快更新
